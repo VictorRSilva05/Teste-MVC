@@ -12,5 +12,15 @@ namespace Persistencia
     public class DisciplinaDAL
     {
         public List<Disciplina> Repository { get; set; } = new List<Disciplina> { };
+
+        public void Inserir(Disciplina disciplina)
+        {
+            Repository.Add(disciplina);
+        }
+
+        public List<Disciplina> ObterTodas()
+        {
+            return Repository;
+        }
     }
 }

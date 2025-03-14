@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
 using System.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace Apresentacao
 {
@@ -20,6 +20,7 @@ namespace Apresentacao
         {
             InitializeComponent();
             disciplinaServico = new DisciplinaServico(new SqlConnection(connectionString));
+            AtualizarDataGridView();
         }
 
         DisciplinaServico disciplinaServico;

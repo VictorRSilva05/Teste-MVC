@@ -9,16 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Modelo;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Apresentacao
 {
     public partial class DisciplinaForm : Form
     {
-        DisciplinaServico disciplinaServico = new DisciplinaServico();
         public DisciplinaForm()
         {
             InitializeComponent();
+            disciplinaServico = new DisciplinaServico(new SqlConnection(connectionString));
         }
+
+        DisciplinaServico disciplinaServico;
+        string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -35,6 +40,11 @@ namespace Apresentacao
         {
             dvgDisciplinas.DataSource = null;
             dvgDisciplinas.DataSource = disciplinaServico.ObterTodas();
+        }
+
+        private void dvgDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

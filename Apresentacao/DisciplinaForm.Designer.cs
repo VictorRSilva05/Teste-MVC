@@ -75,7 +75,7 @@
             button1.Name = "button1";
             button1.Size = new Size(83, 26);
             button1.TabIndex = 4;
-            button1.Text = "Inserir";
+            button1.Text = "Salvar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -86,6 +86,7 @@
             dvgDisciplinas.Name = "dvgDisciplinas";
             dvgDisciplinas.Size = new Size(333, 319);
             dvgDisciplinas.TabIndex = 5;
+            dvgDisciplinas.CellContentClick += dvgDisciplinas_CellContentClick;
             // 
             // DisciplinaForm
             // 

@@ -2,6 +2,7 @@
 using Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,12 @@ namespace Servico
 {
     public class DisciplinaServico
     {
-        private DisciplinaDAL DisciplinaDAL = new DisciplinaDAL();
+        private DisciplinaDAL DisciplinaDAL;
+
+        public DisciplinaServico(SqlConnection connection)
+        {
+            DisciplinaDAL = new DisciplinaDAL(connection);
+        }
 
         public void Inserir(Disciplina disciplina)
         {

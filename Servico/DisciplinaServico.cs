@@ -32,5 +32,10 @@ namespace Servico
         {
             return DisciplinaDAL.ObterPorId(id);
         }
+
+        public void Remover(Disciplina disciplina)
+        {
+            DisciplinaDAL.Remover(disciplina); 
+        }
     }
 }

@@ -87,5 +87,15 @@ namespace Persistencia
             else
                 Atualizar(disciplina);
         }
+
+        public void Remover(Disciplina disciplina)
+        {
+            this.connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "delete from DISCIPLINAS where disciplinaid=@disciplinaid";
+            cmd.Parameters.AddWithValue("@disciplinaid", disciplina.DisciplinaId);
+            cmd.ExecuteNonQuery();
+            this.connection.Close();
+        }
     }
 }

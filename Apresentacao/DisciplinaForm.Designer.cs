@@ -126,6 +126,7 @@
             button3.TabIndex = 9;
             button3.Text = "Remover";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // DisciplinaForm
             // 

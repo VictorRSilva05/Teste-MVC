@@ -28,11 +28,9 @@ namespace Apresentacao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            disciplinaServico.Inserir(new Disciplina()
-            {
-                Nome = txtNome.Text,
-                CargaHoraria = int.Parse(txtCargaHoraria.Text)
-            });
+            disciplinaAtual.Nome = txtNome.Text;
+            disciplinaAtual.CargaHoraria = Convert.ToInt32(txtCargaHoraria.Text);
+            disciplinaServico.Gravar(disciplinaAtual);
             AtualizarDataGridView();
             MessageBox.Show("Inserção realizada com sucesso!");
         }

@@ -16,7 +16,7 @@ namespace Persistencia
         }
         public List<Disciplina> Repository { get; set; } = new List<Disciplina> { };
 
-        public void Inserir(Disciplina disciplina)
+        private void Inserir(Disciplina disciplina)
         {
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
@@ -66,6 +66,26 @@ namespace Persistencia
             }
             connection.Close();
             return disciplina;
+        }
+
+        private void Atualizar(Disciplina disciplina)
+        {
+            this.connection.Open();
+            SqlCommand cmd = connection.CreateCommand();
+            cmd.CommandText = "update DISCIPLINAS set nome=@nome, cargahoraria=@cargahoraria where disciplinaid=@disciplinaid";
+            cmd.Parameters.AddWithValue("@nome", disciplina.Nome);
+            cmd.Parameters.AddWithValue("@cargahoraria", disciplina.CargaHoraria);
+            cmd.Parameters.AddWithValue("@disciplinaid", disciplina.DisciplinaId);
+            cmd.ExecuteNonQuery();
+            this.connection.Close();
+        }
+
+        public void Gravar(Disciplina disciplina)
+        {
+            if (disciplina.DisciplinaId == null)
+                Inserir(disciplina);
+            else
+                Atualizar(disciplina);
         }
     }
 }

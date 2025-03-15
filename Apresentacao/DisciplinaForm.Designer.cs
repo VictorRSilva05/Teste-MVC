@@ -79,7 +79,7 @@
             button1.Name = "button1";
             button1.Size = new Size(83, 26);
             button1.TabIndex = 4;
-            button1.Text = "Salvar";
+            button1.Text = "Gravar";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 

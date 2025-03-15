@@ -18,9 +18,9 @@ namespace Servico
             DisciplinaDAL = new DisciplinaDAL(connection);
         }
 
-        public void Inserir(Disciplina disciplina)
+        public void Gravar(Disciplina disciplina)
         {
-            DisciplinaDAL.Inserir(disciplina);
+            DisciplinaDAL.Gravar(disciplina);
         }
 
         public List<Disciplina> ObterTodas()

@@ -47,5 +47,21 @@ namespace Apresentacao
         {
 
         }
+
+        Disciplina disciplinaAtual = new Disciplina();
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            disciplinaAtual = disciplinaServico.ObterPorId(Convert.ToInt32(txtIDPesquisar.Text));
+            if (disciplinaAtual.DisciplinaId == null )
+            {
+                MessageBox.Show("Disciplina não encontrada");
+            }
+            else
+            {
+                txtNome.Text = disciplinaAtual.Nome;
+                txtCargaHoraria.Text = disciplinaAtual.CargaHoraria.ToString();
+            }
+        }
     }
 }

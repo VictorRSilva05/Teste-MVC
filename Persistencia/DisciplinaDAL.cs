@@ -46,7 +46,26 @@ namespace Persistencia
                 connection.Close();
                 return disciplinas;
             }
-
+        }
+        public Disciplina ObterPorId(long id)
+        {
+            var disciplina = new Disciplina();
+            var command = new SqlCommand(
+                "select disciplinaid, nome, cargahoraria from DISCIPLINAS where disciplinaid = @disciplinaid",
+                this.connection);
+            command.Parameters.AddWithValue("@disciplinaid", id);
+            connection.Open();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    disciplina.DisciplinaId = reader.GetInt32(0);
+                    disciplina.Nome = reader.GetString(1);
+                    disciplina.CargaHoraria = reader.GetInt32(2);
+                }
+            }
+            connection.Close();
+            return disciplina;
         }
     }
 }

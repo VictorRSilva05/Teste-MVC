@@ -34,6 +34,10 @@
             txtCargaHoraria = new TextBox();
             button1 = new Button();
             dvgDisciplinas = new DataGridView();
+            label3 = new Label();
+            txtIDPesquisar = new TextBox();
+            button2 = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgDisciplinas).BeginInit();
             SuspendLayout();
             // 
@@ -88,11 +92,50 @@
             dvgDisciplinas.TabIndex = 5;
             dvgDisciplinas.CellContentClick += dvgDisciplinas_CellContentClick;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(17, 440);
+            label3.Name = "label3";
+            label3.Size = new Size(21, 15);
+            label3.TabIndex = 6;
+            label3.Text = "ID:";
+            // 
+            // txtIDPesquisar
+            // 
+            txtIDPesquisar.Location = new Point(44, 437);
+            txtIDPesquisar.Name = "txtIDPesquisar";
+            txtIDPesquisar.Size = new Size(56, 23);
+            txtIDPesquisar.TabIndex = 7;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(121, 437);
+            button2.Name = "button2";
+            button2.Size = new Size(83, 26);
+            button2.TabIndex = 8;
+            button2.Text = "Pesquisar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(262, 437);
+            button3.Name = "button3";
+            button3.Size = new Size(83, 26);
+            button3.TabIndex = 9;
+            button3.Text = "Remover";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // DisciplinaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(366, 431);
+            ClientSize = new Size(366, 476);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(txtIDPesquisar);
+            Controls.Add(label3);
             Controls.Add(dvgDisciplinas);
             Controls.Add(button1);
             Controls.Add(txtCargaHoraria);
@@ -114,5 +157,9 @@
         private TextBox txtCargaHoraria;
         private Button button1;
         private DataGridView dvgDisciplinas;
+        private Label label3;
+        private TextBox txtIDPesquisar;
+        private Button button2;
+        private Button button3;
     }
 }

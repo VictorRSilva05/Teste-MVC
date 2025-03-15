@@ -21,6 +21,7 @@ namespace Persistencia
             this.connection.Open();
             SqlCommand command = connection.CreateCommand();
             command.CommandText = "insert into DISCIPLINAS(nome, cargahoraria) values(@nome, @cargahoraria)";
+            command.Parameters.AddWithValue("@nome", disciplina.Nome);
             command.Parameters.AddWithValue("@cargahoraria", disciplina.CargaHoraria);
             command.ExecuteNonQuery();
             this.connection.Close();

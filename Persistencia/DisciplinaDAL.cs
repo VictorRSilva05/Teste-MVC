@@ -1,9 +1,6 @@
 ﻿using Modelo;
 using Microsoft.Data.SqlClient;
 
-
-
-
 namespace Persistencia
 {
     public class DisciplinaDAL

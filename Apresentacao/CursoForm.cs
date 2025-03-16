@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Servico;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Apresentacao
         public CursoForm()
         {
             InitializeComponent();
+            RefreshDataGridView();
+        }
+
+        private CursoServico cursoServico = new CursoServico();
+        private void RefreshDataGridView()
+        {
+            dataGridView1.DataSource = cursoServico.TodosOsCursos();
         }
     }
 }

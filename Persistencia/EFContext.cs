@@ -9,7 +9,7 @@ namespace Persistencia
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("@Server=(localdb)\\mssqllocaldb; Database=ADO_NETDatabase; Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer("Server = localhost; Database = ADO_NETDatabase; User Id = Dovahkiin\\prote; Password = root; Database =ADO_NETDatabase; Trusted_Connection=True;TrustServerCertificate=True;");
         }
     }
 }

@@ -11,5 +11,10 @@ namespace Servico
         {
             return cursoDAL.TodosOsCursos();
         }
+
+        public void Gravar(Curso curso)
+        {
+            cursoDAL.Gravar(curso);
+        }
     }
 }

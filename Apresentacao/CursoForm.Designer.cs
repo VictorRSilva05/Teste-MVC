@@ -34,11 +34,10 @@
             label3 = new Label();
             label4 = new Label();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            numericUpDown1 = new NumericUpDown();
+            txtNome = new TextBox();
             button1 = new Button();
+            txtCH = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -93,19 +92,12 @@
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 5;
             // 
-            // textBox2
+            // txtNome
             // 
-            textBox2.Location = new Point(114, 55);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(240, 23);
-            textBox2.TabIndex = 6;
-            // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(114, 90);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(100, 23);
-            numericUpDown1.TabIndex = 7;
+            txtNome.Location = new Point(114, 55);
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(240, 23);
+            txtNome.TabIndex = 6;
             // 
             // button1
             // 
@@ -115,15 +107,23 @@
             button1.TabIndex = 8;
             button1.Text = "Gravar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // txtCH
+            // 
+            txtCH.Location = new Point(114, 87);
+            txtCH.Name = "txtCH";
+            txtCH.Size = new Size(100, 23);
+            txtCH.TabIndex = 9;
             // 
             // CursoForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(366, 476);
+            Controls.Add(txtCH);
             Controls.Add(button1);
-            Controls.Add(numericUpDown1);
-            Controls.Add(textBox2);
+            Controls.Add(txtNome);
             Controls.Add(textBox1);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -133,7 +133,6 @@
             Name = "CursoForm";
             Text = "CursoForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,8 +145,8 @@
         private Label label3;
         private Label label4;
         private TextBox textBox1;
-        private TextBox textBox2;
-        private NumericUpDown numericUpDown1;
+        private TextBox txtNome;
         private Button button1;
+        private TextBox txtCH;
     }
 }

@@ -11,5 +11,14 @@ namespace Persistencia
                 return context.Cursos.ToList();
             }
         }
+
+        public void Gravar(Curso curso)
+        {
+            using (var context = new EFContext())
+            {
+                context.Cursos.Add(curso);
+                context.SaveChanges();
+            }
+        }
     }
 }

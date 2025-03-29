@@ -11,6 +11,8 @@ namespace Modelo
         public long? DisciplinaId { get; set; }
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
+        public long CursoID {  get; set; }
+        public virtual Curso Curso { get; set; }
 
         public override bool Equals(object? obj)
         {

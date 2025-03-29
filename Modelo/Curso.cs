@@ -11,5 +11,6 @@ namespace Modelo
         public long CursoID { get; set; }
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
+        public virtual List<Disciplina> Disciplinas { get; set; }
     }
 }

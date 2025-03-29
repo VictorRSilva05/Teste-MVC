@@ -6,6 +6,7 @@ namespace Persistencia
     public class EFContext : DbContext
     {
         public DbSet<Curso> Cursos {  get; set; }
+        public DbSet<Disciplina> Disciplinas { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);

@@ -32,12 +32,12 @@
             label2 = new Label();
             txtNome = new TextBox();
             txtCargaHoraria = new TextBox();
-            button1 = new Button();
             dvgDisciplinas = new DataGridView();
             label3 = new Label();
             txtIDPesquisar = new TextBox();
-            button2 = new Button();
-            button3 = new Button();
+            label4 = new Label();
+            comboBoxCursos = new ComboBox();
+            buttonGravar = new Button();
             ((System.ComponentModel.ISupportInitialize)dvgDisciplinas).BeginInit();
             SuspendLayout();
             // 
@@ -73,24 +73,12 @@
             txtCargaHoraria.Size = new Size(86, 23);
             txtCargaHoraria.TabIndex = 3;
             // 
-            // button1
-            // 
-            button1.Location = new Point(262, 45);
-            button1.Name = "button1";
-            button1.Size = new Size(83, 26);
-            button1.TabIndex = 4;
-            button1.Text = "Gravar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // dvgDisciplinas
             // 
-            dvgDisciplinas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dvgDisciplinas.Location = new Point(12, 103);
+            dvgDisciplinas.Location = new Point(518, 287);
             dvgDisciplinas.Name = "dvgDisciplinas";
-            dvgDisciplinas.Size = new Size(333, 319);
-            dvgDisciplinas.TabIndex = 5;
-            dvgDisciplinas.CellContentClick += dvgDisciplinas_CellContentClick;
+            dvgDisciplinas.Size = new Size(240, 150);
+            dvgDisciplinas.TabIndex = 14;
             // 
             // label3
             // 
@@ -108,37 +96,44 @@
             txtIDPesquisar.Size = new Size(56, 23);
             txtIDPesquisar.TabIndex = 7;
             // 
-            // button2
+            // label4
             // 
-            button2.Location = new Point(121, 437);
-            button2.Name = "button2";
-            button2.Size = new Size(83, 26);
-            button2.TabIndex = 8;
-            button2.Text = "Pesquisar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            label4.AutoSize = true;
+            label4.Location = new Point(17, 72);
+            label4.Name = "label4";
+            label4.Size = new Size(41, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Curso:";
             // 
-            // button3
+            // comboBoxCursos
             // 
-            button3.Location = new Point(262, 437);
-            button3.Name = "button3";
-            button3.Size = new Size(83, 26);
-            button3.TabIndex = 9;
-            button3.Text = "Remover";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            comboBoxCursos.FormattingEnabled = true;
+            comboBoxCursos.Location = new Point(121, 69);
+            comboBoxCursos.Name = "comboBoxCursos";
+            comboBoxCursos.Size = new Size(224, 23);
+            comboBoxCursos.TabIndex = 11;
+            // 
+            // buttonGravar
+            // 
+            buttonGravar.Location = new Point(130, 165);
+            buttonGravar.Name = "buttonGravar";
+            buttonGravar.Size = new Size(75, 23);
+            buttonGravar.TabIndex = 15;
+            buttonGravar.Text = "Gravar";
+            buttonGravar.UseVisualStyleBackColor = true;
+            buttonGravar.Click += buttonGravar_Click;
             // 
             // DisciplinaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(366, 476);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            ClientSize = new Size(781, 476);
+            Controls.Add(buttonGravar);
+            Controls.Add(comboBoxCursos);
+            Controls.Add(label4);
             Controls.Add(txtIDPesquisar);
             Controls.Add(label3);
             Controls.Add(dvgDisciplinas);
-            Controls.Add(button1);
             Controls.Add(txtCargaHoraria);
             Controls.Add(txtNome);
             Controls.Add(label2);
@@ -156,11 +151,11 @@
         private Label label2;
         private TextBox txtNome;
         private TextBox txtCargaHoraria;
-        private Button button1;
         private DataGridView dvgDisciplinas;
         private Label label3;
         private TextBox txtIDPesquisar;
-        private Button button2;
-        private Button button3;
+        private Label label4;
+        private ComboBox comboBoxCursos;
+        private Button buttonGravar;
     }
 }

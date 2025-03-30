@@ -1,10 +1,28 @@
 ﻿using Modelo;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace Persistencia
 {
     public class DisciplinaDAL
     {
+        public IList<Disciplina> TodasAsDisciplinas()
+        {
+            using (var context = new EFContext())
+            {
+                return context.Disciplinas.Include(d => d.Curso).ToList<Disciplina>();
+            }
+        }
+
+        public void Gravar(Disciplina disciplina)
+        {
+            using (var context = new EFContext())
+            {
+                context.Disciplinas.Add(disciplina);
+                context.SaveChanges();
+            }
+        }
+        /*
         private SqlConnection connection;
 
         public DisciplinaDAL(SqlConnection connection)
@@ -94,5 +112,6 @@ namespace Persistencia
             cmd.ExecuteNonQuery();
             this.connection.Close();
         }
+        */
     }
 }

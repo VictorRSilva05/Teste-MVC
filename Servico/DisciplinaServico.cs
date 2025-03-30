@@ -13,6 +13,17 @@ namespace Servico
     {
         private DisciplinaDAL DisciplinaDAL;
 
+        public IList<Disciplina> TodasAsDisciplinas()
+        {
+            return DisciplinaDAL.TodasAsDisciplinas();
+        }
+
+        public void Gravar(Disciplina disciplina)
+        {
+            DisciplinaDAL.Gravar(disciplina);
+        }
+
+        /*
         public DisciplinaServico(SqlConnection connection)
         {
             DisciplinaDAL = new DisciplinaDAL(connection);
@@ -37,5 +48,6 @@ namespace Servico
         {
             DisciplinaDAL.Remover(disciplina); 
         }
+        */
     }
 }

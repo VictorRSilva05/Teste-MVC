@@ -11,7 +11,7 @@ namespace Servico
 {
     public class DisciplinaServico
     {
-        private DisciplinaDAL DisciplinaDAL;
+        private DisciplinaDAL DisciplinaDAL = new DisciplinaDAL();
 
         public IList<Disciplina> TodasAsDisciplinas()
         {
@@ -23,31 +23,14 @@ namespace Servico
             DisciplinaDAL.Gravar(disciplina);
         }
 
-        /*
-        public DisciplinaServico(SqlConnection connection)
+        public void Remover(long id)
         {
-            DisciplinaDAL = new DisciplinaDAL(connection);
-        }
-
-        public void Gravar(Disciplina disciplina)
-        {
-            DisciplinaDAL.Gravar(disciplina);
-        }
-
-        public List<Disciplina> ObterTodas()
-        {
-            return DisciplinaDAL.ObterTodas();
+            DisciplinaDAL.Remover(id);
         }
 
         public Disciplina ObterPorId(long id)
         {
             return DisciplinaDAL.ObterPorId(id);
         }
-
-        public void Remover(Disciplina disciplina)
-        {
-            DisciplinaDAL.Remover(disciplina); 
-        }
-        */
     }
 }

@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Disciplina
     {
-        public long? DisciplinaId { get; set; }
+        public int? DisciplinaId { get; set; }
         public string Nome { get; set; }
         public int CargaHoraria { get; set; }
         public long CursoID {  get; set; }
